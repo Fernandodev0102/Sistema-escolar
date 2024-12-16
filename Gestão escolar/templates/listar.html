@@ -1,0 +1,43 @@
+<!-- 
+ Autor: Fernando Pereira Alves
+GitHub: @Fernandodev0102
+Contato: 85976014779  
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Alunos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/listar.css') }}">
+</head>
+<body>
+    <h1>Lista de Alunos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Matrícula</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Curso</th>
+                <th>Média</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.matricula }}</td>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.idade }}</td>
+                <td>{{ aluno.curso }}</td>
+                <td>{{ aluno.media }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('cadastro_aluno') }}"><button>Voltar ao Cadastro</button></a>
+</body>
+</html>

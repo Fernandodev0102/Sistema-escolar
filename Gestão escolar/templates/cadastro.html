@@ -1,0 +1,29 @@
+<!-- 
+ Autor: Fernando Pereira Alves
+GitHub: @Fernandodev0102
+Contato: 85976014779  
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
+</head>
+<body>
+    <h1>Cadastro de Aluno</h1>
+    <form method="POST">
+        <label>Matrícula: <input type="text" name="matricula" required></label><br>
+        <label>Nome: <input type="text" name="nome" required></label><br>
+        <label>Idade: <input type="number" name="idade" required></label><br>
+        <label>Curso: <input type="text" name="curso" required></label><br>
+        <label>Senha: <input type="password" name="acesso" required></label><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <a href="{{ url_for('listar_alunos') }}"><button>Visualizar Alunos</button></a>
+</body>
+</html>
